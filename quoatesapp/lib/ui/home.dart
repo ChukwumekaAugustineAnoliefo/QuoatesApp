@@ -65,16 +65,52 @@ class _WisdomState extends State<Wisdom> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(quotes[_index % quotes.length]),
-            ElevatedButton.icon(
-              onPressed: _showQuote,
-              label: const Text('Inspire me'),
-              style: ElevatedButton.styleFrom(
-                iconColor: Colors.teal,
-                fixedSize: const Size.fromWidth(100),
-                padding: const EdgeInsets.all(10),
+            Expanded(
+              child: Center(
+                child: Container(
+                  width: 400,
+                  height: 250,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(14.5)),
+                  margin: const EdgeInsets.all(
+                    30.0,
+                  ),
+                  child: Center(
+                    child: Text(
+                      quotes[_index % quotes.length],
+                      style: TextStyle(
+                        color: Colors.grey.shade600,
+                        fontStyle: FontStyle.italic,
+                        fontSize: 16.5,
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ),
+            const Divider(
+              thickness: 2.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 18.0,
+              ),
+              child: ElevatedButton.icon(
+                onPressed: _showQuote,
+                // color:Colors.black,
+                label: const Text(
+                  'Inspire me',
+                  style: TextStyle(color: Colors.white, fontSize: 18.8),
+                ),
+                style: ElevatedButton.styleFrom(
+                  iconColor: Colors.teal,
+                  fixedSize: const Size.fromWidth(100),
+                  padding: const EdgeInsets.all(10),
+                ),
+              ),
+            ),
+            Spacer()
           ],
         ),
       ),
