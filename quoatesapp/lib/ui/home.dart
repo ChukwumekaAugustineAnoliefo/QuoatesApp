@@ -80,7 +80,7 @@ class _WisdomState extends State<Wisdom> {
                     child: Text(
                       quotes[_index % quotes.length],
                       style: TextStyle(
-                        color: Colors.grey.shade600,
+                        color: Colors.black87,
                         fontStyle: FontStyle.italic,
                         fontSize: 16.5,
                       ),
@@ -97,6 +97,7 @@ class _WisdomState extends State<Wisdom> {
                 top: 18.0,
               ),
               child: ElevatedButton.icon(
+                icon: Icon(Icons.wb_sunny),
                 onPressed: _showQuote,
                 // color:Colors.black,
                 label: const Text(
@@ -104,8 +105,9 @@ class _WisdomState extends State<Wisdom> {
                   style: TextStyle(color: Colors.white, fontSize: 18.8),
                 ),
                 style: ElevatedButton.styleFrom(
-                  iconColor: Colors.teal,
-                  fixedSize: const Size.fromWidth(100),
+                  backgroundColor: Colors.blueAccent,
+                  iconColor: Colors.white,
+                  fixedSize: const Size.fromWidth(300),
                   padding: const EdgeInsets.all(10),
                 ),
               ),
